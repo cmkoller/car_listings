@@ -1,0 +1,12 @@
+<h3><%= @manufacturer.name %></h3>
+
+<p>Country: <%= @manufacturer.country %></p>
+
+<h4><%= @manufacturer.name %> cars currently in lot:</h4>
+<ul>
+  <% @manufacturer.cars.each do |car| %>
+  <li><%= link_to car.name, car_path(car) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Back to Manufacturers List", manufacturers_path %>

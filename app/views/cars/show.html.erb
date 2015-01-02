@@ -1,0 +1,13 @@
+<h3><%= @car.name %></h3>
+
+<p>Manufacturer:
+  <%= link_to @car.manufacturer.name, manufacturer_path(@car.manufacturer) %>
+</p>
+
+<p>Mileage: <%= @car.mileage %></p>
+
+<% if @car.description %>
+  <p>Description: <%= @car.description %></p>
+<% end %>
+
+<%= link_to "Back to Cars List", cars_path %>
